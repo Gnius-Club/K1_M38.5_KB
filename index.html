@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook - Misión 38.5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #5DADE2; /* Azul Gnius */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        .banner {
+            background-color: #85C1E9; /* Azul más claro */
+            color: #333;
+            padding: 15px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .banner:hover {
+            background-color: #AED6F1;
+        }
+        .banner .title {
+            font-size: 1.3em;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 8px;
+            border-top: 1px solid #fff;
+            padding-top: 8px;
+            color: #1A5276; /* Azul oscuro texto */
+        }
+        .content {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            background-color: #EAF2F8; /* Azul muy claro fondo */
+            border-radius: 5px;
+        }
+        .dialogue {
+            background-color: #FEF9E7; /* Amarillo pálido para diálogo */
+            border: 1px solid #FAD7A0;
+            border-radius: 10px;
+            padding: 10px 15px;
+            margin: 15px 0;
+            text-align: left; /* Cambiado a izquierda para mejor lectura */
+            font-style: italic;
+            color: #784212; /* Marrón oscuro texto */
+            position: relative; /* Para el bocadillo */
+            border-left: 5px solid #F39C12; /* Naranja */
+        }
+
+        .dropdown {
+            margin-bottom: 25px;
+            text-align: center; /* Centrar dropdown */
+        }
+        .dropdown label {
+            font-weight: bold;
+            color: #1A5276;
+        }
+        .dropdown select {
+            font-size: 1.1em;
+            padding: 8px 12px;
+            margin-left: 10px;
+            border-radius: 5px;
+            border: 1px solid #85C1E9;
+        }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px;}
+        td { padding: 12px; border: 1px solid #AED6F1; vertical-align: top; }
+        td strong { color: #1A5276; }
+        .level-title { /* Clase específica para el título del nivel */
+             text-align: center;
+             color: #5DADE2;
+             font-size: 1.4em;
+             margin-bottom: 20px;
+        }
+        /* Clases para ocultar/mostrar contenido por nivel */
+        .k1-content, .k2-content, .k3-content { display: none; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Playbook - Misión 38.5: El Guardián de la Torre Tambaleante</h1>
+        </div>
+
+        <div class="dropdown">
+            <label for="class-level">Nivel:</label>
+            <select id="class-level" onchange="updateContent()">
+                <option value="K1">K1 (3 años)</option>
+                <option value="K2">K2 (4 años)</option>
+                <option value="K3">K3 (5 años)</option>
+            </select>
+        </div>
+
+        <h2 id="selected-level" class="level-title">Nivel: K1 (3 años)</h2>
+
+        <!-- ............................................Aquí empezarán las actividades........................................... -->
+
+<!-- Actividad 0: Revisión de Materiales -->
+<div id="activity-0" class="activity">
+    <div class="banner" onclick="toggleContent('revision_materiales')">
+        <div class="title">📚 Actividad 0: Revisión de Materiales</div>
+        <div class="subtitle">Objetivo: Asegurarse de que todos los materiales necesarios para la clase estén disponibles y preparados antes de que lleguen los niños.</div>
+    </div>
+    <div id="revision_materiales" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (N/A):</strong> Revisa que tengas listos los materiales indicados en la **DIAPOSITIVA 16**: 1 Kinderbot y 10 iBricks por cada pareja. Kinderbots cargados.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 1: Bienvenida e Introducción -->
+<div id="activity-1" class="activity">
+    <div class="banner" onclick="toggleContent('bienvenida')">
+        <div class="title">🎉 Actividad 1: ¡Alerta de Construcción! ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Objetivo: Introducir el desafío de interactuar con una estructura alta y la importancia de la estabilidad y el control.</div>
+    </div>
+    <div id="bienvenida" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la **DIAPOSITIVA 17** “Bienvenida”. Saluda como inspectores de construcciones Gnius.</td>
+                <td>
+                    <div class="dialogue">
+                        "¡Atención, atención, inspectores Gnius del CODE SQUAD! ¡Hoy tenemos una misión de alta precisión! Hemos detectado una torre MUY alta y un poco... ¡tambaleante! Necesitamos investigarla con cuidado. ¿Listos para usar sus habilidades de construcción y programación?"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la **DIAPOSITIVA 18** "Gimnasio CODE SQUAD". Explica que necesitan entrenar la mente para movimientos súper cuidadosos y planificación precisa.</td>
+                <td>
+                     <div class="dialogue">
+                        "Inspeccionar una torre tambaleante requiere ¡máxima concentración y movimientos súper suaves! No podemos chocarla, ¡o se podría caer! Nuestro cerebro necesita estar en modo 'precisión total'. ¡Vamos al Gimnasio Cerebral a practicar secuencias exactas y movimientos controlados!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 2: Baile de Algoritmos -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('baile-algoritmos')">
+        <div class="title">🎶 Actividad 2: Baile de Algoritmos ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Objetivo: Practicar secuencias de giros y avances controlados, preparándose para rodear la torre.</div>
+    </div>
+    <div id="baile-algoritmos" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la **DIAPOSITIVA 19** “Baile de Algoritmos”. Guía el baile, enfocándose en hacer giros pequeños y pasos medidos.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Inspectores, a bailar con cuidado! Imaginen que bailamos alrededor de algo delicado. Pasos cortos: 'Adelante, adelante'. Giros suaves: 'Gira un poquito a la derecha', 'Gira otro poquito'. ¡Tenemos que movernos con precisión! ¡Sigan la música y practiquen el control!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 3: Planteamiento del Problema - La Torre Tambaleante -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('planteamiento-problema')">
+        <div class="title">🗼 Actividad 3: ¡La Inspección de la Torre! ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Objetivo: Presentar la historia de la torre construida por gigantes juguetones, el reto de construirla alta y estable, y la tarea de Kinderbot de rodearla para inspeccionarla.</div>
+    </div>
+    <div id="planteamiento-problema" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1.5 minutos):</strong> Reproduce la **DIAPOSITIVA 20**. Narra la historia de la torre construida por gigantes y su necesidad de inspección.</td>
+                <td>
+                     <div class="dialogue">
+                        "¡Resulta que la torre tambaleante la construyeron unos gigantes muy juguetones que visitaron Gniusville! ¡Usaron bloques enormes (nuestros iBricks)! Les encanta construir torres ALTAS, ALTAS, ALTAS, pero... ¡no son muy buenos asegurándose de que sean estables! ¡Se tambalean un poquito! El alcalde nos ha pedido ayuda: ¡necesitamos que nuestro mejor inspector, Kinderbot, revise la torre por todos lados!"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1.5 minutos):</strong> Reproduce la **DIAPOSITIVA 21**. Explica el doble reto: Construir la torre más alta y estable posible con 8-10 iBricks. Luego, programar a Kinderbot para que se acerque y la rodee lo más posible sin tocarla.</td>
+                <td>
+                     <div class="dialogue">
+                        "¡Aquí está la misión súper Gnius, inspectores! Primero: ¡ustedes construirán la torre! Usen de 8 a 10 bloques (¡casi todos!) para hacer la torre MÁS ALTA que puedan, ¡pero que no se caiga! ¡Tiene que ser estable! (Demuestra apilar con cuidado). Segundo: ¡la inspección! Programaremos a Kinderbot para que se acerque a su torre, y luego le dé la vuelta COMPLETA (o casi completa), ¡muy cerquita pero SIN TOCARLA!, para ver si está bien construida por todos lados. ¿Listos para el desafío de construcción y programación precisa?"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 4: Formación de Parejas -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('formacion-parejas')">
+        <div class="title">🤝 Actividad 4: ¡Equipos de Ingenieros de Torres! ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Objetivo: Formar parejas para colaborar en la construcción estable y la planificación de la secuencia de rodeo.</div>
+    </div>
+    <div id="formacion-parejas" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la **DIAPOSITIVA 22** “Formación de Equipos”. Explica que construir alto y estable requiere un gran equipo de ingenieros. Forma las parejas.</td>
+                <td>
+                     <div class="dialogue">
+                        "¡Ingenieros de élite! ¡Construir torres altas y estables es un trabajo de precisión que se hace mejor en equipo! ¡Mientras uno pone un bloque, el otro puede asegurarse de que no se tambalee! ¡Y juntos pueden planear la ruta de inspección de Kinderbot! ¡Formen sus Equipos de Ingenieros de Torres! ¡Busquen a su compañero constructor!"
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Verifica que todos tengan pareja. Anímales a empezar a diseñar y construir su torre alta y estable.</td>
+                <td>
+                     <div class="dialogue">
+                        "¿Equipos listos? ¡Manos a los bloques! ¡Usen casi todos sus bloques (8, 9 o 10)! ¡Construyan la torre más alta que puedan, pero con cuidado para que no se caiga! ¡Piensen cómo poner los bloques para que sea fuerte! ¡Mientras construyen, vayan pensando por dónde pasará Kinderbot para rodearla!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 5: Reto de Codificación - ¡Construyendo Alto y Programando Cerca! -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('reto-codificacion')">
+        <div class="title">⌨️ Actividad 5: ¡Código de Inspección Precisa! ⏰ Tiempo: 8 minutos</div>
+        <div class="subtitle">Objetivo: Construir la torre alta y estable. Programar la secuencia de Kinderbot para acercarse y rodearla parcialmente (K1), casi completa (K2) o lo más posible con precisión (K3).</div>
+    </div>
+    <div id="reto-codificacion" class="content">
+        <table>
+            <!-- Paso Común: Construir Torre y Repasar Botones -->
+             <tr>
+                <td><strong>PASO 1 (3 minutos):</strong> Reproduce la **DIAPOSITIVA 23** "¡Torre Lista y Plan de Inspección!". Guía para que terminen de construir su torre más alta y estable posible con 8-10 iBricks. Repasa botones A, GI, GD.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Wow, ingenieros, qué torres tan altas! ¡Asegúrense de que estén bien firmes! Ahora, ¡el plan de inspección! Kinderbot tiene que darle la vuelta. Necesitará avanzar ('Adelante'), girar ('Girar Izquierda' o 'Girar Derecha') varias veces para rodearla. ¡La clave es la precisión para no chocarla!"
+                    </div>
+                </td>
+            </tr>
+            <!-- Contenido Específico por Nivel -->
+             <!-- K1 -->
+            <tr class="k1-content">
+                <td><strong>PASO 2 - K1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 24** "Misión K1: Media Vuelta". Programar 6 pasos para acercarse y rodear la mitad de la torre (ej. A, A, GD, A, A, GD).</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Equipo K1! ¡Inspección de media torre! Código: Acercarse -> 'Adelante', 'Adelante'. Girar para ponerse al lado -> 'Girar Derecha'. Avanzar por un lado -> 'Adelante', 'Adelante'. Girar de nuevo -> 'Girar Derecha'. ¡Son 6 pasos para ver la mitad! ¡Preparen el código! ¡Sin 'Go'!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K2 -->
+             <tr class="k2-content">
+                <td><strong>PASO 2 - K2 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 25** "Misión K2: Casi la Vuelta Completa". Programar 8 pasos para rodear casi toda la torre (ej. A, A, GD, A, A, GD, A, A).</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Ingenieros K2! ¡Casi la vuelta completa! Usaremos los 8 pasos. Plan: Acercarse (A, A), Girar D (GD), Avanzar lado 1 (A, A), Girar D (GD), Avanzar lado 2 (A, A). ¡Son 8 pasos para ver casi todo! ¡Programen la secuencia completa con cuidado! ¡Sin activar 'Go'!"
+                    </div>
+                </td>
+            </tr>
+            <!-- K3 -->
+             <tr class="k3-content">
+                <td><strong>PASO 2 - K3 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 26** "Misión K3: ¡Vuelta de Alta Precisión!". Programar 8 pasos para rodear lo más posible, enfocándose en giros de 90 grados y avances justos para mantenerse cerca sin tocar (ej. A, A, GD, A, GD, A, GD, A - como un cuadrado alrededor). Debugging crucial.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Maestros K3! ¡La vuelta de alta precisión! ¡8 pasos para rodearla lo mejor posible! Plan sugerido: Acercarse (A, A). Ahora, ¡como si dibujáramos un cuadrado alrededor! Girar D (GD), Avanzar UN paso (A), Girar D (GD), Avanzar UN paso (A), Girar D (GD), Avanzar UN paso (A). ¡Son 8 pasos! ¡La clave es que los giros sean buenos y el avance sea corto para no chocar! ¡Programen! Si al probar roza la torre, ¡ajusten! ¿Menos pasos 'Adelante' antes del primer giro? ¿Un giro extra? ¡La precisión es el reto! ¡Preparen el código, sin 'Go'!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 6: ¡La Inspección Final! -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('probando-inspeccion')">
+        <div class="title">🚀 Actividad 6: ¡Kinderbot el Inspector! ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Objetivo: Ejecutar el código y observar si Kinderbot logra rodear la torre según el objetivo del nivel, fomentando el debugging de precisión.</div>
+    </div>
+    <div id="probando-inspeccion" class="content">
+        <table>
+             <!-- K1 -->
+            <tr class="k1-content">
+                <td><strong>PASO 1 - K1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 27** "¡Éxito K1!". Anima a poner a Kinderbot cerca y presionar 'Go'. Observar si completa la media vuelta. Celebrar.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Equipo K1! ¡Pongan a Kinderbot inspector cerca de la torre! ¿Listos con el código de 6 pasos? ¡Presionen 'Go'! ¡Miren cómo se mueve! Avanza... Gira... Avanza... ¡Gira! ¿Logró ver la mitad de la torre? ¡SIIII! ¡Inspección parcial completada! ¡Buen trabajo!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K2 -->
+             <tr class="k2-content">
+                 <td><strong>PASO 1 - K2 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 28** "¡Éxito K2!". Anima a poner a Kinderbot cerca y presionar 'Go'. Observar si logra dar casi toda la vuelta (los 8 pasos). Celebrar.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Ingenieros K2! ¡Inspector Kinderbot listo! ¿Preparados con el código de 8 pasos? ¡Presionen 'Go'! ¡Veamos si da casi toda la vuelta! Avanza, Gira, Avanza, Avanza, Gira, Avanza, Avanza... ¡GUAU! ¡Logró inspeccionar casi todos los lados! ¡Excelente precisión!"
+                    </div>
+                </td>
+            </tr>
+             <!-- K3 -->
+             <tr class="k3-content">
+                 <td><strong>PASO 1 - K3 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 29** "¡Éxito K3!". Anima a poner a Kinderbot cerca y presionar 'Go'. Observar MUY atentamente si logra rodear sin tocar. Si falla, guiar intensivamente el debugging (¿giró 90 grados? ¿avanzó demasiado?). Celebrar la perseverancia y la precisión lograda.</td>
+                 <td>
+                     <div class="dialogue">
+                        "¡Maestros K3! ¡La prueba de fuego! ¡Inspector Kinderbot en posición! ¿Listos con el código de precisión de 8 pasos? ¡Presionen 'Go'! ¡Ojos bien abiertos! ¿Se mantiene cerca sin tocar? ¿Hace los giros justos? ¡SI LO LOGRA, SON MAGOS DE LA PRECISIÓN! Si roza o se aleja, ¡no pasa nada! ¡Es un súper desafío! ¿Qué falló? ¿El primer giro? ¿El avance fue mucho? ¡Usen 'Clear', ajusten UN poquito y prueben de nuevo! ¡Conseguir esta maniobra es digno de los mejores ingenieros del CODE SQUAD! ¡Celebremos cada intento y el éxito final!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 7: Mensaje del Cuartel (Omitida para Misión 38.5) -->
+
+<!-- Actividad 8: Conclusión y Reflexión -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('conclusion-reflexion')">
+        <div class="title">🏁 Actividad 8: ¡Torre Estable y Reflexión! ⏰ Tiempo: 5 minutos</div>
+        <div class="subtitle">Objetivo: Celebrar la construcción y la inspección, reforzar la importancia de la estabilidad, la secuencia larga y la precisión en la programación.</div>
+    </div>
+    <div id="conclusion-reflexion" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (5 minutos):</strong> Reproduce la **DIAPOSITIVA 30** "¡Misión Cumplida!". Cierra la historia (la torre es segura gracias a la inspección). Realiza preguntas de reflexión sobre construcción y programación precisa.</td>
+                <td>
+                    <div class="dialogue">
+                        "¡MISIÓN DE INSPECCIÓN COMPLETADA, CODE SQUAD! ¡Gracias a sus habilidades de construcción, las torres quedaron altas y (más o menos) estables! ¡Y gracias a su programación súper precisa, Kinderbot pudo inspeccionarlas sin derribarlas! ¡El alcalde está muy contento! Pensemos en nuestro trabajo de hoy:
+1. ¿Fue fácil construir una torre ALTA y que NO se cayera? ¿Qué tuvieron que hacer para que fuera estable?
+2. ¿Por qué era importante que Kinderbot se moviera con CUIDADO alrededor de la torre?
+3. ¿Fue difícil programar TANTOS pasos (hasta 8) seguidos para que Kinderbot hiciera exactamente lo que querían? ¿Qué hicieron si no funcionaba bien? (¡Ajustar/Corregir!)
+¡Han demostrado ser excelentes ingenieros, constructores y programadores de precisión! ¡Saben construir y saben programar con cuidado! ¡Felicidades, equipo!"
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+        <!-- ............................................Aquí terminarán las actividades........................................... -->
+
+    </div>
+
+<script>
+    function toggleContent(id) {
+        var content = document.getElementById(id);
+        var parentActivity = content.closest('.activity');
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            parentActivity.classList.remove('active');
+        } else {
+            content.style.display = "block";
+            parentActivity.classList.add('active');
+        }
+    }
+
+    function updateContent() {
+        var level = document.getElementById("class-level").value;
+        var levelText = document.getElementById("class-level").options[document.getElementById("class-level").selectedIndex].text;
+        document.getElementById("selected-level").innerText = "Nivel: " + levelText;
+
+        var k1Contents = document.querySelectorAll('.k1-content');
+        var k2Contents = document.querySelectorAll('.k2-content');
+        var k3Contents = document.querySelectorAll('.k3-content');
+
+        k1Contents.forEach(function(el) { el.style.display = 'none'; });
+        k2Contents.forEach(function(el) { el.style.display = 'none'; });
+        k3Contents.forEach(function(el) { el.style.display = 'none'; });
+
+        var selectedContents = document.querySelectorAll('.' + level.toLowerCase() + '-content');
+        selectedContents.forEach(function(el) {
+             el.style.display = 'table-row';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        updateContent();
+    });
+</script>
+
+</body>
+</html>
